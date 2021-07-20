@@ -2,16 +2,29 @@
 #include <iostream>
 #include <String>
 #include <set>
-
+#include <vector>
 using namespace std;
 
 bool word_break(string A, set<string> B, int n) {
-
-    cout << "-- word-break-2 --" << endl;
-
-
-
-
+    vector<set<string>> segmented_words;
+    int index = -1;
+    set<string> B_cpy = B;
+    string A_cpy = A;
+    for(string str : B)
+    {
+        
+        B_cpy.erase(str);
+        for(string s : B_cpy)
+        {
+            if(A_cpy.empty())
+            {
+                //segmented_words.push_back
+            }
+        }
+        B_cpy.erase(str);
+        B_cpy = B;
+        A_cpy = A;
+    }
     return 0;
 }
 
